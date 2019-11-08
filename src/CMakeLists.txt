@@ -171,6 +171,8 @@ if (WITH_WEBSOCKETS)
 	else (STATIC_WEBSOCKETS)
 		set (MOSQ_LIBS ${MOSQ_LIBS} websockets)
 	endif (STATIC_WEBSOCKETS)
+	include_directories(/usr/local/include)
+    link_directories(/usr/local/lib)
 endif (WITH_WEBSOCKETS)
 
 add_executable(mosquitto ${MOSQ_SRCS})
