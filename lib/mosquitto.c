@@ -23,6 +23,9 @@ Contributors:
 #include <sys/time.h>
 #include <strings.h>
 #endif
+#ifdef __APPLE__
+#include <mach/mach_time.h>
+#endif
 
 #include "mosquitto.h"
 #include "mosquitto_internal.h"
